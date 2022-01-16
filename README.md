@@ -12,6 +12,10 @@ Modelagem do Banco de dados:
   - Inquilinos, Unidades e Despesas
   - Cada uma, contendo os campos pedidos no desafio e mais alguns que acrescentei ao projeto.
 
+Eu implementei a solução do desafio em um site com os campos no cabeçalho. Acessando cada campo, você terá disponível as tabelas com as informações cadastradas
+(se você iniciar o projeto pela primeira vez, não conterá nenhuma informação). E após ir cadastrando as informações, você já consegue vê-las nas tabelas
+tendo as opções de edição e remoção em cada uma.
+
 Você pode baixar o projeto clicando em CODE e Download ZIP
 
 Lembrando que quando falo para você digitar os códigos no terminal, você tem que digitá-los sem as aspas. 
