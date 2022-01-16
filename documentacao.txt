@@ -1,0 +1,91 @@
+Todas as páginas do projeto contém o menu superior e o rodapé
+Obs: Após qualquer atualização de registros como cadastrar, editar e deletar, a base de dados já é automaticamente atualizada
+
+PÁGINA INICIAL
+
+	Menu superior
+		- Início (página inicial)
+		- Inquilinos
+		- Unidades
+		- Despesas
+		- Meu linkedin, github e instagram(alinhado à direita)
+		
+	Conteúdo
+		- informações importantes sobre mim
+	
+	Rodapé
+		- meu nome como o desenvolvedor do projeto
+
+INQUILINOS
+	
+	Contém uma tabela com todas os inquilinos cadastrados listados pelo id com o total de inquilinos no pé da tabela
+	
+	Cadastrar inquilino
+		- Você pode cadastrar um inquilino clicando no botão Cadastrar inquilino, disponível logo abaixo do título Lista de inquilinos
+		- Dentro da página de cadastro, você pode fornecer as informações nos campos
+		- Você tem as opções de Cadastrar o inquilino, Apagar as informações dos campos e voltar à página de inquilinos
+		- Você não conseguirá cadastrar se estiver algum campo não preenchido		
+		- Após cadastrar o inquilino, você será redirecionado de volta à pagina de inquilinos com o inquilino que você cadastrou na tabela
+	
+	Editar inquilino
+		- Você pode editar um inquilino clicando no botão Editar na linha da tabela onde contém o inquilino desejado
+		- Dentro da página de edição, as informações do inquilino escolhido estarão nos campos e você poderá editá-las
+		- Você tem as opções de editar o inquilino e de voltar à página de inquilinos
+		- Você não conseguirá editar se estiver algum campo não preenchido
+		- Após editar o inquilino, você será redirecionado de volta à pagina de inquilinos com o inquilino que você editou atualizado na tabela
+	
+	Deletar inquilino
+		- Você pode deletar um inquilino clicando no botão Deletar na linha da tabela onde contém o inquilino desejado
+		- Dentro da página de deletar, as informações do inquilino escolhido estarão listadas em uma tabela
+		- Você terá as opções de deletar o inquilino e de cancelar, que voltará à página de inquilinos
+		- Após deletar o inquilino, você será redirecionado de volta à pagina de inquilinos com o inquilino que você deletou removido da tabela
+		
+UNIDADES
+	
+	Contém uma tabela com todas as unidades cadastradas listadas pelo id com o total de unidades no pé da tabela
+	
+	Cadastrar unidade
+		- Você pode cadastrar uma unidade clicando no botão Cadastrar unidade, disponível logo abaixo do título Lista de unidades
+		- Dentro da página de cadastro, você pode fornecer as informações nos campos
+		- Você tem as opções de Cadastrar a unidade, Apagar as informações dos campos e voltar à página de unidades
+		- Você não conseguirá cadastrar se estiver algum campo não preenchido
+		- Após cadastrar a unidade, você será redirecionado de volta à pagina de unidades com a unidade que você cadastrou na tabela
+	
+	Editar unidade
+		- Você pode editar uma unidade clicando no botão Editar na linha da tabela onde contém a unidade desejada
+		- Dentro da página de edição, as informações da unidade escolhida estarão nos campos e você poderá editá-las
+		- Você tem as opções de editar a unidade e de voltar à página de unidades
+		- Você não conseguirá editar se estiver algum campo não preenchido
+		- Após editar a unidade, você será redirecionado de volta à pagina de unidades com a unidade que você editou atualizada na tabela
+	
+	Deletar unidade
+		- Você pode deletar uma unidade clicando no botão Deletar na linha da tabela onde contém a unidade desejada
+		- Dentro da página de deletar, as informações da unidade escolhida estarão listadas em uma tabela
+		- Você terá as opções de deletar a unidade e de cancelar, que voltará à página de unidades
+		- Após deletar a unidade, você será redirecionado de volta à pagina de unidades com a unidade que você deletou removida da tabela
+
+DESPESAS
+	
+	Contém uma tabela com todas as despesas cadastradas listadas pelo id da unidade com o valor total das despesas e o total de despesas no pé da tabela
+	
+	Cadastrar despesa
+		- Você pode cadastrar uma despesa clicando no botão Cadastrar Despesa, disponível logo abaixo do título Lista de Despesas
+		- Dentro da página de cadastro, você pode fornecer as informações nos campos
+		- Você tem as opções de Cadastrar a despesa, Apagar as informações dos campos e voltar à página de despesas
+		- Você não conseguirá cadastrar se estiver algum campo não preenchido	
+		- Após cadastrar a despesa, você será redirecionado de volta à pagina de despesas com a despesa que você cadastrou na tabela
+	
+	Editar despesa
+		- Você pode editar uma despesa clicando no botão Editar na linha da tabela onde contém a despesa desejada
+		- Dentro da página de edição, as informações da despesa escolhida estarão nos campos e você poderá editá-las
+		- Você tem as opções de editar a despesa e de voltar à página de despesas
+		- Você não conseguirá editar se estiver algum campo não preenchido
+		- Após editar a despesa, você será redirecionado de volta à pagina de despesas com a despesa que você editou atualizada na tabela
+	
+	Deletar despesa
+		- Você pode deletar uma despesa clicando no botão Deletar na linha da tabela onde contém a despesa desejada
+		- Dentro da página de deletar, as informações da despesa escolhida estarão listadas em uma tabela
+		- Você tem as opções de deletar a despesa e de cancelar, que volta à página de despesas
+		- Após deletar a despesa, você será redirecionado de volta à pagina de despesas com a despesa que você deletou removida da tabela
+
+Espero que tenha gostado do meu projeto. Obrigado!
