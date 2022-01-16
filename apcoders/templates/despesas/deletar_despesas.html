@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Deletar Despesas
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpoDespesas">
+        <h1>Deletar Despesa</h1>
+        <form action="" method="post" id="form" name="form">
+            {% csrf_token %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id da Unidade</th>
+                        <th>Tipo de Despesa</th>
+                        <th>Valor</th>
+                        <th>Vencimento da Fatura</th>
+                        <th>Descrição</th>
+                        <th>Status de Pagamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ despesa.id_unidade }}</td>
+                        <td>{{ despesa.tipo_despesa }}</td>
+                        <td>{{ despesa.valor }}</td>
+                        <td>{{ despesa.vencimento_fatura }}</td>
+                        <td>{{ despesa.descricao }}</td>
+                        <td>{{ despesa.status_pagamento }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="6">
+                            <p class="text-center fw-bolder fs-3">
+                                Você realmente deseja deletar esta despesa do sistema?
+                            </p>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger">Deletar</button>
+                <a href="{% url 'listarDespesas' %}">
+                    <span class="btn btn-primary">Cancelar</span>
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

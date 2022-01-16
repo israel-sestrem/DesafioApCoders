@@ -1,0 +1,91 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Editar Despesas
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpo">
+        <h1>Editar Despesa</h1>
+        <form action="" method="post" id="form" name="form">
+            {% csrf_token %}
+            <div id="campoEsquerdo">
+                <div class="mb-3">
+                    <label for="id_id_unidade" class="form-label fw-bolder">Id da Unidade</label>
+                    <input type="number" class="form-control" id="id_id_unidade" name="id_unidade" value="{{ despesa.id_unidade }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id_valor" class="form-label fw-bolder">Valor</label>
+                    <input type="number" class="form-control" id="id_valor" name="valor" max="1000000" value="{{ despesa.valor }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id_descricao" class="form-label fw-bolder">Descrição</label>
+                    <input type="text" class="form-control" id="id_descricao" name="descricao" maxlength="100" value="{{ despesa.descricao }}" required>
+                </div>
+            </div>
+            <div id="campoDireito">
+                <div class="mb-3">
+                    <label for="id_tipo_despesa" class="form-label fw-bolder">Tipo de Despesa</label>
+                    <select class="form-select" aria-label="Default select example" name="tipo_despesa" id="id_tipo_despesa" required>
+                        <option value="Luz">Luz</option>
+                        {% if despesa.tipo_despesa == 'Agua' %}
+                            <option value="Agua" selected>Água</option>
+                        {% else %}
+                            <option value="Agua">Água</option>
+                        {% endif %}
+
+                        {% if despesa.tipo_despesa == 'Gas' %}
+                            <option value="Gas" selected>Gás</option>
+                        {% else %}  
+                            <option value="Gas">Gás</option>
+                        {% endif %}
+
+                        {% if despesa.tipo_despesa == 'Manutencao' %}
+                            <option value="Manutencao" selected>Manutenção</option>
+                        {% else %}
+                            <option value="Manutencao">Manutenção</option>
+                        {% endif %}
+
+                        {% if despesa.tipo_despesa == 'Limpeza' %}
+                            <option value="Limpeza" selected>Limpeza</option>
+                        {% else %}
+                            <option value="Limpeza">Limpeza</option>
+                        {% endif %}
+
+                        {% if despesa.tipo_despesa == 'Equipamentos' %}
+                            <option value="Equipamentos" selected>Equipamentos</option>
+                        {% else %}
+                            <option value="Equipamentos">Equipamentos</option>
+                        {% endif %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="id_vencimento_fatura" class="form-label fw-bolder">Vencimento da Fatura</label>
+                    <input type="date" class="form-control" id="id_vencimento_fatura" name="vencimento_fatura" value="{{ despesa.vencimento_fatura }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id_status_pagamento" class="form-label fw-bolder">Status de Pagamento</label>
+                    <select class="form-select" aria-label="Default select example" name="status_pagamento" id="id_status_pagamento" required>
+                        <option value="Concluido">Concluído</option>
+                        {% if despesa.status_pagamento == 'Nao Concluido' %}
+                            <option value="Nao Concluido" selected>Não Concluído</option>
+                        {% else %}
+                            <option value="Nao Concluido">Não Concluído</option>
+                        {% endif %}
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Editar</button>
+                <a href="{% url 'listarDespesas' %}">
+                    <span class="btn btn-secondary">Voltar</span>
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Inquilinos
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpoInquilinos">
+        <h1>Lista de Inquilinos</h1>
+        <div class="text-center">
+            <a href="{% url 'cadastrarInquilinos' %}">
+                <button class="btn btn-primary">Cadastrar Inquilino</button>
+            </a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th colspan="2" id="opcoes">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for inquilino in inquilinos %}
+                    <tr>
+                        <td>{{ inquilino.nome }}</td>
+                        <td>{{ inquilino.idade }}</td>
+                        <td>{{ inquilino.sexo }}</td>
+                        <td>{{ inquilino.telefone }}</td>
+                        <td>{{ inquilino.email }}</td>
+                        <td>
+                            <a href="{% url 'editarInquilinos' inquilino.id %}">
+                                <button class="btn btn-primary">Editar</button>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'deletarInquilinos' inquilino.id %}">
+                                <button class="btn btn-danger">Deletar</button>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="7" class="fw-bold text-center fs-5">Total de Inquilinos: {{ totalInquilinos }}</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}

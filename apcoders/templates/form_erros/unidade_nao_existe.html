@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Erro - Formulário
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpoUnidades">
+        <h1>A unidade informada não existe</h1>
+        <div class="text-center">
+            <button class="btn btn-primary" onclick="history.go(-1)">Voltar</button>
+            <a href="{% url 'cadastrarUnidades' %}">
+                <button class="btn btn-primary">Criar Unidade</button>
+            </a>
+        </div>
+        <h1 id="unidadeNaoExiste">Unidades disponíveis</h1>
+        <div class="text-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id da Unidade</th>
+                        <th>Proprietário</th>
+                        <th>Condomínio</th>
+                        <th>Endereço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for unidade in unidades %}
+                        <tr>
+                            <td class="fw-bold">{{ unidade.id }}</td>
+                            <td>{{ unidade.proprietario }}</td>
+                            <td>{{ unidade.condominio }}</td>
+                            <td>{{ unidade.endereco }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4" class="fw-bold text-center fs-5">Total de Unidades: {{ totalUnidades }}</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+{% endblock %}

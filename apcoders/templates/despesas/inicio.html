@@ -1,0 +1,61 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Despesas
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpoDespesas">
+        <h1>Lista de Despesas</h1>
+        <div class="text-center">
+            <a href="{% url 'cadastrarDespesas' %}">
+                <button class="btn btn-primary">Cadastrar Despesa</button>
+            </a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id da Unidade</th>
+                    <th>Tipo de Despesa</th>
+                    <th>Valor</th>
+                    <th>Vencimento da Fatura</th>
+                    <th>Descrição</th>
+                    <th>Status de Pagamento</th>
+                    <th colspan="2" id="opcoes">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for despesa in despesas %}
+                    <tr>
+                        <td>{{ despesa.id_unidade }}</td>
+                        <td>{{ despesa.tipo_despesa }}</td>
+                        <td>R${{ despesa.valor }}</td>
+                        <td>{{ despesa.vencimento_fatura }}</td>
+                        <td>{{ despesa.descricao }}</td>
+                        <td>{{ despesa.status_pagamento }}</td>
+                        <td>
+                            <a href="{% url 'editarDespesas' despesa.id %}">
+                                <button class="btn btn-primary">Editar</button>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'deletarDespesas' despesa.id %}">
+                                <button class="btn btn-danger">Deletar</button>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="4" class="fw-bold text-center fs-5">Valor Total: R${{ valorTotal }}</th>
+                    <th colspan="4" class="fw-bold text-center fs-5">Total de Despesas: {{ totalDespesas }}</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}

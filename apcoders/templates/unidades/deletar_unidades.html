@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Deletar Unidades
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpoUnidades">
+        <h1>Deletar Unidade</h1>
+        <form action="" method="post" id="form" name="form">
+            {% csrf_token %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id da Unidade</th>
+                        <th>Proprietário</th>
+                        <th>Condomínio</th>
+                        <th>Endereço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ unidade.id }}</td>
+                        <td>{{ unidade.proprietario }}</td>
+                        <td>{{ unidade.condominio }}</td>
+                        <td>{{ unidade.endereco }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4">
+                            <p class="text-center fw-bolder fs-3">
+                                Você realmente deseja deletar esta unidade do sistema?
+                            </p>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger">Deletar</button>
+                <a href="{% url 'listarUnidades' %}">
+                    <span class="btn btn-primary">Cancelar</span>
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

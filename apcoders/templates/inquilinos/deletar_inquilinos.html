@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Deletar Inquilinos
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpoInquilinos">
+        <h1>Deletar Inquilino</h1>
+        <form action="" method="post" id="form" name="form">
+            {% csrf_token %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Sexo</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ inquilino.nome }}</td>
+                        <td>{{ inquilino.idade }}</td>
+                        <td>{{ inquilino.sexo }}</td>
+                        <td>{{ inquilino.telefone }}</td>
+                        <td>{{ inquilino.email }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5">
+                            <p class="text-center fw-bolder fs-3">
+                                Você realmente deseja deletar este inquilino do sistema?
+                            </p>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger">Deletar</button>
+                <a href="{% url 'listarInquilinos' %}">
+                    <span class="btn btn-primary">Cancelar</span>
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

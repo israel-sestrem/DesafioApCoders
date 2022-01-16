@@ -1,0 +1,56 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Unidades
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpoUnidades">
+        <h1>Lista de Unidades</h1>
+        <div class="text-center">
+            <a href="{% url 'cadastrarUnidades' %}">
+                <button class="btn btn-primary">Cadastrar Unidade</button>
+            </a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id da Unidade</th>
+                    <th>Proprietário</th>
+                    <th>Condomínio</th>
+                    <th>Endereço</th>
+                    <th colspan="2" id="opcoes">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for unidade in unidades %}
+                    <tr>
+                        <td>{{ unidade.id }}</td>
+                        <td>{{ unidade.proprietario }}</td>
+                        <td>{{ unidade.condominio }}</td>
+                        <td>{{ unidade.endereco }}</td>
+                        <td>
+                            <a href="{% url 'editarUnidades' unidade.id %}">
+                                <button class="btn btn-primary">Editar</button>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'deletarUnidades' unidade.id %}">
+                                <button class="btn btn-danger">Deletar</button>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="6" class="fw-bold text-center fs-5">Total de Unidades: {{ totalUnidades }}</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}

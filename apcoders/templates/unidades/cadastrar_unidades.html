@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Cadastrar Unidades
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpo">
+        <h1>Cadastrar Unidade</h1>
+        <form action="" method="post" id="form" name="form">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_proprietario" class="form-label fw-bolder">Proprietário</label>
+                <input type="text" class="form-control" id="id_proprietario" name="proprietario" maxlength="50" required>
+            </div>
+            <div class="mb-3">
+                <label for="id_condominio" class="form-label fw-bolder">Condomínio</label>
+                <input type="text" class="form-control" id="id_condominio" name="condominio" maxlength="30" required>
+            </div>
+            <div class="mb-3">
+                <label for="id_endereco" class="form-label fw-bolder">Endereço</label>
+                <input type="text" class="form-control" id="id_endereco" name="endereco" maxlength="100" required>
+            </div>
+            <hr>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="reset" class="btn btn-danger">Apagar</button>
+                <a href="{% url 'listarUnidades' %}">
+                    <span class="btn btn-secondary">Voltar</span>
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

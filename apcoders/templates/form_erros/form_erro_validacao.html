@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Erro - Formulário
+{% endblock %}
+
+{% block navBar %}
+    {% include 'base/cabecalho.html' %}
+{% endblock %}
+
+{% block corpo %}
+    <div id="corpo">
+        <h1>Erro na validação do formulário</h1>
+        <div class="text-center">
+            <button class="btn btn-primary" onclick="history.go(-1)">Voltar</button>
+        </div>
+    </div>
+{% endblock %}
