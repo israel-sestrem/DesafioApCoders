@@ -4,6 +4,14 @@ Tecnologias utilizadas:
   - Bootstrap
   - MySQL
 
+Padrão Utilizado:
+  - MVC
+
+Modelagem do Banco de dados:
+  - O Django cria vários campos necessários para utilizá-lo na tabela, mas as utilizadas no projeto são:
+  - Inquilinos, Unidades e Despesas
+  - Cada uma, contendo os campos pedidos no desafio e mais alguns que acrescentei ao projeto.
+
 Você pode baixar o projeto clicando em CODE e Download ZIP
 
 Lembrando que quando falo para você digitar os códigos no terminal, você tem que digitá-los sem as aspas. 
