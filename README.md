@@ -87,8 +87,7 @@ obs: As despesas já estão ordenadas pelo id das unidades
 Espero que você tenha conseguido abrir meu projeto na sua máquina com sucesso. Obrigado!
 
 Fotos do projeto:
-![Início](https://user-images.githubusercontent.com/79377858/149681404-8c8d5b2c-a9b4-497f-95b5-44a0237ba31d.png)
-![Inquilinos](ht![Unidades](https://user-images.githubusercontent.com/79377858/149681408-5174a973-1739-4772-a8d4-d1081daf7ae8.png)
-tps://user-images![Despesas](https://user-images.githubusercontent.com/79377858/149681413-2c94f6d0-d3fb-4ed7-b9e7-3cd00fe08bcb.png)
-.githubusercontent.com/79377858/149681406-cfb71543-e278-4e1e-9bb0-d0e8564c8294.png)
-
+![Inicio](https://user-images.githubusercontent.com/79377858/149681526-a0bed1ab-a1fe-44b8-937f-510dec7a5f17.png)
+![Inquilinos](https://user-images.githubusercontent.com/79377858/149681532-8b7484a8-8790-4d60-a2a4-1567131d77ed.png)
+![Unidades](https://user-images.githubusercontent.com/79377858/149681537-3bca8e80-ae90-418d-b081-5d5108693403.png)
+![Despesas](https://user-images.githubusercontent.com/79377858/149681540-a14fd35e-27ab-437b-b103-a8560300abac.png)
