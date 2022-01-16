@@ -14,7 +14,8 @@ Modelagem do Banco de dados:
 
 Eu implementei a solução do desafio em um site com os campos no cabeçalho. Acessando cada campo, você terá disponível as tabelas com as informações cadastradas
 (se você iniciar o projeto pela primeira vez, não conterá nenhuma informação). E após ir cadastrando as informações, você já consegue vê-las nas tabelas
-tendo as opções de edição e remoção em cada uma.
+tendo as opções de edição e remoção em cada uma. Também implementei nas despesas, o campo "id da unidade" em que tem de ser informado para saber
+à qual unidade a despesa se refere. Criei mais uma página de erro caso o usuário digite um id de uma unidade que não existe.
 
 Você pode baixar o projeto clicando em CODE e Download ZIP
 
