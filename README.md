@@ -50,7 +50,7 @@ DJANGO
 1 - abrir cmd ou terminal do vscode e digitar "pip install django" 
 
 2 - caso não tenha reconhecido o pip e você tenha usado o terminal do vscode, tente no cmd ou vice e versa. Caso ainda não tenha funcionado, 
-siga os passos desse site:
+siga os passos desse site(adicionando no PATH):
 https://dicasdepython.com.br/resolvido-pip-nao-e-reconhecido-como-um-comando-interno/
 
 3 - caso o pip peça para atualizar a versão, copie o código que o pip pede e atualize. Rode apenas se o pip não estiver atualizado
