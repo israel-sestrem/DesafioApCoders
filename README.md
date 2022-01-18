@@ -7,10 +7,14 @@ Tecnologias utilizadas:
 Padrão Utilizado:
   - MVC
 
-Modelagem do Banco de dados:
+Banco de dados:
   - O Django cria vários campos necessários para utilizá-lo na tabela, mas as utilizadas no projeto são:
   - Inquilinos, Unidades e Despesas
   - Cada uma, contendo os campos pedidos no desafio e mais alguns que acrescentei ao projeto.
+
+Modelagem do banco de dados:
+  - Abra o arquivo da modelagem com o aplicativo starUML, disponível em: https://staruml.io/download
+  - Modelei as tabelas com todas as informações e embaixo, os métodos de cada uma(CRUD's).
 
 Eu implementei a solução do desafio em um site com os campos no cabeçalho. Acessando cada campo, você terá disponível as tabelas com as informações cadastradas
 (se você iniciar o projeto pela primeira vez, não conterá nenhuma informação). E após ir cadastrando as informações, você já consegue vê-las nas tabelas
